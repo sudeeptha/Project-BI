@@ -12,18 +12,18 @@ https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows?resourc
 - Step 5: Attribute Duration contains both total duration of movies in minutes and total number of seasons in TV shows.
 - Step 6: Therefore the column duration is split for total duration and no of season using the power query.
 
-	if [duration.2] = "Season" then [duration.1] else 0
+    if [duration.2] = "Season" then [duration.1] else 0
 
 - Step 7: In report view, under view tab, theme was selected.
 - Step 8: In Visualization, piechart was choosen to know the total number of TV shows and Movies
 - Step 9: Line chart is used to view the release of movies and Tv shows in each year
 - Step 10: Three cards were used to view the Total videos available , Total time duration of the videos in Prime and average duration.Caculated using DAX
 
-	Total Time = SUM(amazon_prime_titles[Total Duration])
+    Total Time = SUM(amazon_prime_titles[Total Duration])
 
-	Total shows = COUNT(amazon_prime_titles[show_id]) 
+    Total shows = COUNT(amazon_prime_titles[show_id]) 
 
-	avg.duration = AVERAGE(amazon_prime_titles[Total Duration]) 
+    avg.duration = AVERAGE(amazon_prime_titles[Total Duration]) 
 
 -Step 11: Bar chart is created to view the top 5 longest duration of the movies
 ![Longduration](https://github.com/sudeeptha/Project-BI/assets/26385640/7156c67b-ad05-4f56-a4b5-64dd0c5b45fa)
