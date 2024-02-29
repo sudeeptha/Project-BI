@@ -6,24 +6,24 @@ This dashboard aims to enhance comprehension of the rising usage of the online s
 ### Steps Followed
 - Step 1: Load the data into Power Bi.The dataset is taken from kaggle.com
 https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows?resource=download
-- Step 2: Open Power query editor and in view tab under Data preview section, check "Column distribution","colun quality", "column profile" options.
+- Step 2: Open Power query editor and in view tab under Data preview section, check "Column distribution","column quality", "column profile" options.
 - Step 3: Profile will be opened only for 1000 rows so you need to select "column profiling based on entire dataset".
-- Step 4: It is found that the field date_added contains 98% of the data empty and country contains 89% of the data empty and director contains 37% empty.So these columns are removed as part if data cleaning.
+- Step 4: It is found that the field date_added contains 98% of the data empty and country contains 89% of the data empty and director contains 37% empty.So these columns are removed as part of data cleaning.
 - Step 5: Attribute Duration contains both total duration of movies in minutes and total number of seasons in TV shows.
 - Step 6: Therefore the column duration is split for total duration and no of season using the power query.
 
-if [duration.2] = "Season" then [duration.1] else 0
+	if [duration.2] = "Season" then [duration.1] else 0
 
 - Step 7: In report view, under view tab, theme was selected.
 - Step 8: In Visualization, piechart was choosen to know the total number of TV shows and Movies
 - Step 9: Line chart is used to view the release of movies and Tv shows in each year
 - Step 10: Three cards were used to view the Total videos available , Total time duration of the videos in Prime and average duration.Caculated using DAX
 
-Total Time = SUM(amazon_prime_titles[Total Duration])
+	Total Time = SUM(amazon_prime_titles[Total Duration])
 
-Total shows = COUNT(amazon_prime_titles[show_id]) 
+	Total shows = COUNT(amazon_prime_titles[show_id]) 
 
-avg.duration = AVERAGE(amazon_prime_titles[Total Duration]) 
+	avg.duration = AVERAGE(amazon_prime_titles[Total Duration]) 
 
 -Step 11: Bar chart is created to view the top 5 longest duration of the movies
 ![Longduration](https://github.com/sudeeptha/Project-BI/assets/26385640/7156c67b-ad05-4f56-a4b5-64dd0c5b45fa)
