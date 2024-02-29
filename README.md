@@ -25,6 +25,7 @@ https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows?resourc
 
     avg.duration = AVERAGE(amazon_prime_titles[Total Duration]) 
 
+
 -Step 11: Bar chart is created to view the top 5 longest duration of the movies
 ![Longduration](https://github.com/sudeeptha/Project-BI/assets/26385640/7156c67b-ad05-4f56-a4b5-64dd0c5b45fa)
 
